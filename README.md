@@ -23,3 +23,6 @@ psutil
 pyjokes
 pyautogui
 webbrowser
+
+Disclaimer
+When running the AI, the AI will be recording and saving the recordings as a file on your local machine.
