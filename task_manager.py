@@ -1,7 +1,6 @@
 """Task Manager Module"""
 
 import webbrowser
-import smtplib
 import wikipedia
 import pyautogui
 import os

@@ -23,4 +23,3 @@ psutil
 pyjokes
 pyautogui
 webbrowser
-smtplib
