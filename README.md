@@ -26,3 +26,4 @@ webbrowser
 
 Disclaimer
 When running the AI, the AI will be recording and saving the recordings as a file on your local machine.
+Project inspired by Udemy course "Learn To Create AI Assistant (JARVIS) with Python by: Arbaz Khan
