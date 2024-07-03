@@ -1,5 +1,3 @@
-"""Task Manager Module"""
-
 import webbrowser
 import wikipedia
 import pyautogui
@@ -34,10 +32,8 @@ class TaskManager:
             self.shutdown()
         elif 'restart' in command:
             self.restart()
-        elif 'remember that' in command:
-            self.remember(command)
-        elif 'do you know anything' in command:
-            self.recall()
+        else:
+            self.speech_engine.speak("Sorry, I didn't understand that command.")
 
     def open_application(self, command):
         # Implement opening application based on command
@@ -80,15 +76,7 @@ class TaskManager:
         os.system("logout")
 
     def shutdown(self):
-        os.system("shutdown /s /t 1")
+        os.system("shutdown now")
 
     def restart(self):
-        os.system("shutdown /r /t 1")
-
-    def remember(self, command):
-        # Implement memory storage
-        pass
-
-    def recall(self):
-        # Implement memory recall
-        pass
+        os.system("reboot")
