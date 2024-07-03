@@ -7,7 +7,6 @@ Features
 Text-to-Speech (TTS) using gTTS
 Speech recognition using speech_recognition
 System monitoring using psutil
-Task automation such as opening applications, sending emails, and taking screenshots
 Telling jokes using pyjokes
 
 Requirements

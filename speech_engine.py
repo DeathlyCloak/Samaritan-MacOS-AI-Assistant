@@ -14,7 +14,7 @@ class SpeechEngine:
 
     def speak(self, text):
         try:
-            tts = gTTS(text=text, lang='en')
+            tts = gTTS(text=text, lang='en') # Can change the language here 
             tts.save("samaritan.mp3")
             os.system("afplay samaritan.mp3")  # Use 'afplay' for macOS to play audio file
         except Exception as e:

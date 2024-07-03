@@ -12,16 +12,12 @@ class TaskManager:
         self.joke_teller = joke_teller
 
     def execute(self, command):
-        if 'open' in command:
-            self.open_application(command)
-        elif 'search' in command:
+        if 'search' in command:
             self.search_web(command)
         elif 'screenshot' in command:
             self.take_screenshot()
         elif 'play' in command:
             self.play_song(command)
-        elif 'news' in command:
-            self.get_news()
         elif 'cpu' in command:
             self.report_cpu_usage()
         elif 'battery' in command:
@@ -36,10 +32,6 @@ class TaskManager:
             self.restart()
         else:
             self.speech_engine.speak("Sorry, I didn't understand that command.")
-
-    def open_application(self, command):
-        # Implement opening application based on command
-        pass
 
     def search_web(self, command):
         self.speech_engine.speak("What should I search for?")
