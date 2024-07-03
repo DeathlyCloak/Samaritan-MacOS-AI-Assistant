@@ -1,3 +1,5 @@
+"""Task Manager - Holds all the commands eligble in the AI"""
+
 import webbrowser
 import wikipedia
 import pyautogui
@@ -55,10 +57,6 @@ class TaskManager:
         music_dir = 'path/to/music'
         songs = os.listdir(music_dir)
         os.startfile(os.path.join(music_dir, songs[0]))
-
-    def get_news(self):
-        # Implement getting news
-        pass
 
     def report_cpu_usage(self):
         usage = self.system_monitor.get_cpu_usage()
