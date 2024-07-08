@@ -48,7 +48,7 @@ class TaskManager:
     def play_song(self, command):
         music_dir = 'Desktop/CD Music'
         songs = os.listdir(music_dir)
-        os.startfile(os.path.join(music_dir, songs[0]))
+        os.startfile(os.path.join(music_dir, songs[33]))
 
     def report_cpu_usage(self):
         usage = self.system_monitor.get_cpu_usage()

@@ -15,7 +15,7 @@ Python 3.11
 
 pip install [insert module name here]
 
-gTTS
+n\ gTTS
 sounddevice
 numpy
 scipy
