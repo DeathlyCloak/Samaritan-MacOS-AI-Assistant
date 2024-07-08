@@ -46,7 +46,7 @@ class TaskManager:
         self.speech_engine.speak("Screenshot has been taken.")
 
     def play_song(self, command):
-        music_dir = 'path/to/music'
+        music_dir = 'Desktop/CD Music'
         songs = os.listdir(music_dir)
         os.startfile(os.path.join(music_dir, songs[0]))
 
@@ -62,11 +62,21 @@ class TaskManager:
         joke = self.joke_teller.tell_joke()
         self.speech_engine.speak(joke)
 
+# New function - Remember what I said and place it into a text and also able to read back what I asked to remember
+   #  elif 'remember that' in query:
+    #        speak("What should I remember sir?")
+     #       data = takeCommand()
+      #      speak("remembering" + data)
+       #     remember = open('data.txt', 'w')
+        #    remember.write(data)
+         #   remember.close()
+       # elif 'do you know anything' in query:
+        #    remember = open('data.txt', 'r')
+         #   speak("you said to remember that" + remember.read())
+ 
     def logout(self):
-        os.system("logout")
-
+        os.system("shutdown -1")
     def shutdown(self):
-        os.system("shutdown now")
-
+        os.system("shutdown /s /t 1")
     def restart(self):
-        os.system("reboot")
+        os.system('shutdown /r /t 1')

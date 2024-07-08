@@ -27,8 +27,7 @@ class Samaritan:
         cpu_usage = self.system_monitor.get_cpu_usage()
         battery_status = self.system_monitor.get_battery_status()
 
-        greeting_message = f"{greeting}! I am Samaritan, your personal AI assistant. Your CPU usage is at {cpu_usage} 
-        percent and your battery is at {battery_status} percent. Everything is fully operational and ready for the next project."
+        greeting_message = f"{greeting}! I am Samaritan, your personal AI assistant. Your CPU usage is at {cpu_usage} percent and your battery is at {battery_status} percent. Everything is fully operational and ready for the next project."
 
         self.speech_engine.speak(greeting_message)
 
