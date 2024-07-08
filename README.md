@@ -1,6 +1,6 @@
 # Samaritan-MacOS-AI-Assistant
  
-Overview
+* Overview
 Samaritan is a personal AI assistant capable of performing various tasks such as web searches, system monitoring, and even telling jokes. This project uses Python and several libraries for text-to-speech, speech recognition, and system control.
 
 Features
@@ -15,7 +15,7 @@ Python 3.11
 
 pip install [insert module name here]
 
-n\ gTTS
+gTTS
 sounddevice
 numpy
 scipy
