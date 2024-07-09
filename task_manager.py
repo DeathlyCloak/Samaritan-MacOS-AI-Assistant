@@ -1,7 +1,6 @@
 """Task Manager - Holds all the commands eligble in the AI"""
 
 import webbrowser
-import wikipedia
 import pyautogui
 import os
 
@@ -46,9 +45,9 @@ class TaskManager:
         self.speech_engine.speak("Screenshot has been taken.")
 
     def play_song(self, command):
-        music_dir = 'Desktop/CD Music'
+        music_dir = '/Users/Mr.Finch/Desktop/CD Music'
         songs = os.listdir(music_dir)
-        os.startfile(os.path.join(music_dir, songs[33]))
+        os.PathLike(os.path.join(music_dir, songs[33]))
 
     def report_cpu_usage(self):
         usage = self.system_monitor.get_cpu_usage()

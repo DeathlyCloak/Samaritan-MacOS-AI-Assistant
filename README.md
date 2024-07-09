@@ -13,7 +13,7 @@ Samaritan is a personal AI assistant capable of performing various tasks such as
 ### Requirements
 * Python 3.11
 
-#### pip install [insert module name here]
+#### pip install [insert package name here]
 * gTTS
 * sounddevice
 * numpy
@@ -25,7 +25,7 @@ Samaritan is a personal AI assistant capable of performing various tasks such as
 * webbrowser
 
 # Disclaimer
-When running the AI, the AI will be recording and saving the recordings as a file on your local machine.  
+When running the AI, the AI will be recording and saving the recordings as a file on your local machine, as well as any screenshots.  
 Project inspired by Udemy course "Learn To Create AI Assistant (JARVIS) with Python by: Arbaz Khan.  
 Requires very little knowledge of Python Coding to work on machine.  
 To use the play music function will need to change the path to the path of music on your drive for it to work.
