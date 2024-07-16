@@ -1,8 +1,7 @@
-"""Task Manager - Holds all the commands eligble in the AI"""
-
 import webbrowser
 import pyautogui
 import os
+from playsound import playsound
 
 class TaskManager:
     def __init__(self, speech_engine, system_monitor, joke_teller):
@@ -15,7 +14,7 @@ class TaskManager:
             self.search_web(command)
         elif 'screenshot' in command:
             self.take_screenshot()
-        elif 'play' in command:
+        elif 'music' in command:
             self.play_song(command)
         elif 'cpu' in command:
             self.report_cpu_usage()
@@ -23,12 +22,10 @@ class TaskManager:
             self.report_battery_status()
         elif 'joke' in command:
             self.tell_joke()
-        elif 'logout' in command:
-            self.logout()
-        elif 'shutdown' in command:
-            self.shutdown()
-        elif 'restart' in command:
-            self.restart()
+        elif 'remember' in command:
+            self.remember()
+        elif 'recall' in command:
+            self.recall()
         else:
             self.speech_engine.speak("Sorry, I didn't understand that command.")
 
@@ -45,9 +42,7 @@ class TaskManager:
         self.speech_engine.speak("Screenshot has been taken.")
 
     def play_song(self, command):
-        music_dir = '/Users/Mr.Finch/Desktop/CD Music'
-        songs = os.listdir(music_dir)
-        os.PathLike(os.path.join(music_dir, songs[33]))
+        self.speech_engine.speak("Due to Apple Music and Apple wanting more money I can not play your music. Sorry Sir")
 
     def report_cpu_usage(self):
         usage = self.system_monitor.get_cpu_usage()
@@ -61,21 +56,22 @@ class TaskManager:
         joke = self.joke_teller.tell_joke()
         self.speech_engine.speak(joke)
 
-# New function - Remember what I said and place it into a text and also able to read back what I asked to remember
-   #  elif 'remember that' in query:
-    #        speak("What should I remember sir?")
-     #       data = takeCommand()
-      #      speak("remembering" + data)
-       #     remember = open('data.txt', 'w')
-        #    remember.write(data)
-         #   remember.close()
-       # elif 'do you know anything' in query:
-        #    remember = open('data.txt', 'r')
-         #   speak("you said to remember that" + remember.read())
- 
-    def logout(self):
-        os.system("shutdown -1")
-    def shutdown(self):
-        os.system("shutdown /s /t 1")
-    def restart(self):
-        os.system('shutdown /r /t 1')
+    def remember(self):
+        self.speech_engine.speak("What should I remember?")
+        data = self.speech_engine.listen_command()
+        if data:
+            self.speech_engine.speak("Remembering " + data)
+            with open('remember.txt', 'w') as remember_file:
+                remember_file.write(data)
+            self.speech_engine.speak("I have remembered that.")
+
+    def recall(self):
+        try:
+            with open('remember.txt', 'r') as remember_file:
+                data = remember_file.read()
+            if data:
+                self.speech_engine.speak("You asked me to remember: " + data)
+            else:
+                self.speech_engine.speak("There is nothing to recall.")
+        except FileNotFoundError:
+            self.speech_engine.speak("There is nothing to recall.")
