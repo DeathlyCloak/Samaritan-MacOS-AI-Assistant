@@ -16,13 +16,6 @@ Samaritan is a personal AI assistant that performs various tasks such as web sea
 
 - Python 3.11
 
-### Required Packages
-
-To install the required packages, use pip:
-
-```bash
-pip install gTTS sounddevice numpy scipy speech_recognition psutil pyjokes pyautogui playsound
-```
 
 # Usage
 
@@ -33,7 +26,9 @@ git clone https://github.com/DeathlyCloak/Samaritan-AI-Assistant.git
 cd Samaritan-AI-Assistant
 
 ### Install the required packages:
-pip install -r 
+```bash
+pip install gTTS sounddevice numpy scipy speech_recognition psutil pyjokes pyautogui playsound
+```
 
 ### Run the main script:
 ```python3 Samaritan.py```
