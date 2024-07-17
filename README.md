@@ -41,5 +41,5 @@ pip install gTTS sounddevice numpy scipy speech_recognition psutil pyjokes pyaut
 - The AI records audio commands and saves them as files on your local machine, along with screenshots and text files.
 - This project is inspired by the Udemy course "Learn To Create AI Assistant (JARVIS) with Python" by Arbaz Khan.
 - Minimal Python knowledge is required to use this project.
-- The music playback feature requires a valid path to the music files on your drive to function.
+- The music playback feature does not work, due to licencing of Apple Music.
 - For macOS users, the afplay command is used for audio playback. Windows users may need to replace this with start in the speech_engine.py file.
