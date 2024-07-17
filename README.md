@@ -22,28 +22,3 @@ To install the required packages, use pip:
 
 ```bash
 pip install gTTS sounddevice numpy scipy speech_recognition psutil pyjokes pyautogui playsound
-
-# Disclaimer
-The AI records audio commands and saves them as files on your local machine, along with screenshots and text files.
-This project is inspired by the Udemy course "Learn To Create AI Assistant (JARVIS) with Python" by Arbaz Khan.
-Minimal Python knowledge is required to use this project.
-The music playback feature requires a valid path to the music files on your drive to function.
-For macOS users, the afplay command is used for audio playback. Windows users may need to replace this with start in the speech_engine.py file.
-
-# Usage
-Clone the repository:
-git clone https://github.com/yourusername/Samaritan-AI-Assistant.git
-
-Navigate to the project directory:
-cd Samaritan-AI-Assistant
-
-Install the required packages:
-
-pip install -r requirements.txt
-
-Run the main script:
-python3 Samaritan.py
-
-Interact with the assistant:
-Speak commands to the assistant, such as "search," "screenshot," "music," "cpu," "battery," "joke," "remember," or "recall."
-The assistant will respond based on the command given.
