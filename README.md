@@ -39,8 +39,8 @@ pip install -r
 ```python3 Samaritan.py```
 
 ### Interact with the assistant:
-- ** Speak commands to the assistant, such as "search," "screenshot," "music," "cpu," "battery," "joke," "remember," or "recall."
-- ** The assistant will respond based on the command given.
+- Speak commands to the assistant, such as "search," "screenshot," "music," "cpu," "battery," "joke," "remember," or "recall."
+- The assistant will respond based on the command given.
 
 # Disclaimer
 - The AI records audio commands and saves them as files on your local machine, along with screenshots and text files.
