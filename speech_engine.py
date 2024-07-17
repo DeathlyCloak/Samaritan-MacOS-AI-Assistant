@@ -1,9 +1,10 @@
-"""Speech Eninge"""
+"""
+Speech Engine Module
+"""
 
 from gtts import gTTS
 import os
 import sounddevice as sd
-import numpy as np
 import scipy.io.wavfile as wav
 import speech_recognition as sr
 
@@ -14,9 +15,9 @@ class SpeechEngine:
 
     def speak(self, text):
         try:
-            tts = gTTS(text=text, lang='en', tld='com.au')  # Can change the language here 
+            tts = gTTS(text=text, lang='en')
             tts.save("samaritan.mp3")
-            os.system("afplay samaritan.mp3")  # Use 'afplay' for macOS to play audio file
+            os.system("afplay samaritan.mp3")  # Use 'afplay' for macOS; replace with 'start' for Windows
         except Exception as e:
             print(f"Error in text-to-speech: {e}")
 
@@ -27,7 +28,7 @@ class SpeechEngine:
             sd.wait()  # Wait until recording is finished
             wav.write("recording.wav", self.fs, audio)
             print("Recording saved as recording.wav")
-            
+
             # Use speech recognition to convert the audio to text
             with sr.AudioFile("recording.wav") as source:
                 audio_data = self.recognizer.record(source)

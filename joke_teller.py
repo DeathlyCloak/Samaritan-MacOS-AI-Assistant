@@ -1,4 +1,6 @@
-"""Joke Telling Module"""
+"""
+Joke Telling Module
+"""
 
 import pyjokes
 

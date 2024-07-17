@@ -1,8 +1,12 @@
+"""
+Main File for Samaritan AI Assistant
+"""
+
+from datetime import datetime
 import speech_engine
 import task_manager
 import system_monitor
 import joke_teller
-from datetime import datetime
 
 class Samaritan:
     def __init__(self):
@@ -26,7 +30,7 @@ class Samaritan:
         battery_status = self.system_monitor.get_battery_status()
 
         greeting_message = (f"{greeting}! I am Samaritan, your personal AI assistant. "
-                            f"Your CPU usage is at {cpu_usage} percent and your battery is at {battery_status} percent. "
+                            f"Your CPU usage is at {cpu_usage}% and your battery is at {battery_status}%. "
                             "Everything is fully operational and ready for the next project.")
 
         self.speech_engine.speak(greeting_message)

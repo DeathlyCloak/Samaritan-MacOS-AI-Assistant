@@ -1,4 +1,6 @@
-"""System Monitor Module"""
+"""
+System Monitor Module
+"""
 
 import psutil
 

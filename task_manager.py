@@ -1,3 +1,7 @@
+"""
+Task Manager Module
+"""
+
 import webbrowser
 import pyautogui
 import os
@@ -42,15 +46,15 @@ class TaskManager:
         self.speech_engine.speak("Screenshot has been taken.")
 
     def play_song(self, command):
-        self.speech_engine.speak("Due to Apple Music and Apple wanting more money I can not play your music. Sorry Sir")
+        self.speech_engine.speak("Due to licensing issues, I cannot play your music. Sorry!")
 
     def report_cpu_usage(self):
         usage = self.system_monitor.get_cpu_usage()
-        self.speech_engine.speak(f"CPU usage is at {usage} percent")
+        self.speech_engine.speak(f"CPU usage is at {usage}%")
 
     def report_battery_status(self):
         battery_status = self.system_monitor.get_battery_status()
-        self.speech_engine.speak(f"Battery is at {battery_status} percent")
+        self.speech_engine.speak(f"Battery is at {battery_status}%")
 
     def tell_joke(self):
         joke = self.joke_teller.tell_joke()

@@ -1,30 +1,24 @@
-# Samaritan-MacOS-AI-Assistant
- 
+# Samaritan AI Assistant
+
 ## Overview
-Samaritan is a personal AI assistant capable of performing various tasks such as web searches, system monitoring, and even telling jokes. This project uses Python and several libraries for text-to-speech, speech recognition, and system control.
+
+Samaritan is a personal AI assistant that performs various tasks such as web searches, system monitoring, and telling jokes. This project demonstrates skills in Python and uses several libraries for text-to-speech, speech recognition, and system control.
 
 ## Features
-* Text-to-Speech (TTS) using gTTS
-* Speech recognition using speech_recognition
-* System monitoring using psutil
-* Telling jokes using pyjokes
 
-### Requirements
-* Python 3.11
+- **Text-to-Speech (TTS)**: Converts text to speech using the `gTTS` library.
+- **Speech Recognition**: Recognizes speech commands using the `speech_recognition` library.
+- **System Monitoring**: Monitors system performance and battery status using `psutil`.
+- **Joke Telling**: Tells jokes using the `pyjokes` library.
+- **Task Management**: Executes various tasks based on voice commands, such as web searches, screenshots, and more.
 
-#### pip install [insert package name here]
-* gTTS
-* sounddevice
-* numpy
-* scipy
-* speech_recognition
-* psutil
-* pyjokes
-* pyautogui
-* webbrowser
+## Requirements
 
-# Disclaimer
-When running the AI, the AI will be recording and saving the recordings as a file on your local machine, as well as any screenshots and text files.  
-Project inspired by Udemy course "Learn To Create AI Assistant (JARVIS) with Python by: Arbaz Khan.  
-Requires very little knowledge of Python Coding to work on machine.  
-To use the play music function will need to change the path to the path of music on your drive for it to work.
+- Python 3.11
+
+### Required Packages
+
+To install the required packages, use pip:
+
+```bash
+pip install gTTS sounddevice numpy scipy speech_recognition psutil pyjokes pyautogui playsound
